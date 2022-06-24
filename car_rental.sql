@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2021 at 10:56 AM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Generation Time: Jun 24, 2022 at 05:48 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -165,7 +165,6 @@ CREATE TABLE `modells` (
 --
 
 INSERT INTO `modells` (`id`, `name`, `slug`, `release_year`, `seats`, `fuel_type`, `motor_type`, `Specifications`, `brand_id`, `car_id`, `image`, `price`, `sale_price`, `quantity`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Ford', 'car5', '2010-12-20', 5, 'petrol', 'diesel', 'A wonderful serenity has taken possession.', 1, 25, 'images/yjzkOjiQIlEHYrFBg94ZIbiRkyZohDJRcsQbO5GX.jpg', 500000.00, 22.10, 5, 'in-stock', '2021-07-19 18:21:33', '2021-07-26 04:38:15'),
 (5, 'Car3', 'car3', '2021-07-15', 4, 'solar', 'cgh', 'A wonderful serenity has taken possession.', 2, 27, 'images/yhN4RUhBckgFUaMgXNSPDavvETNR7lrvKu4sn381.jpg', 5000.00, 0.00, 5, 'in-stock', '2021-07-19 20:58:15', '2021-08-04 04:34:51'),
 (6, 'car6', 'cars', '2021-07-22', 2, 'solar', 'solar', 'A wonderful serenity has taken possession.', 3, 27, 'images/yhN4RUhBckgFUaMgXNSPDavvETNR7lrvKu4sn381.jpg', 3000.00, 1.00, 1, 'sold-out', '2021-07-20 01:57:13', '2021-07-20 02:04:45'),
 (8, 'Ford', 'car4', '2021-07-21', 3, 'solar', 'petrol', 'A wonderful serenity has taken possession.', 3, 27, 'images/yjzkOjiQIlEHYrFBg94ZIbiRkyZohDJRcsQbO5GX.jpg', 30000.00, 1.00, 1, 'sold-out', '2021-07-20 04:46:05', '2021-07-26 13:56:59'),
@@ -220,8 +219,6 @@ CREATE TABLE `model_tag` (
 --
 
 INSERT INTO `model_tag` (`modell_id`, `tag_id`) VALUES
-(1, 22),
-(1, 23),
 (18, 25),
 (24, 22),
 (24, 23),
@@ -341,10 +338,10 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ty
 (8, 'Mrs. Catherine Hermann', 'goyette.lea@example.net', '2021-07-17 17:02:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user', 'pRu6KVn2IH', '2021-07-17 17:02:27', '2021-07-17 17:02:27'),
 (9, 'Mrs. Hosea Ryan DVM', 'leilani.kertzmann@example.org', '2021-07-17 17:02:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user', 'CBifxx1ITV', '2021-07-17 17:02:27', '2021-07-17 17:02:27'),
 (10, 'Lorenzo Beer', 'bette72@example.com', '2021-07-17 17:02:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user', '4mhpHuBTgE', '2021-07-17 17:02:27', '2021-07-17 17:02:27'),
-(11, 'khadija shafei', 'khadoj121998@gmail.com', '2021-08-06 12:57:36', '$2y$10$XRr7z2/ZiVrsQVmnKqpw7usmR3WFTKuSOox3f.wtQokyUmmynwCmG', 'admin', 'phsG3wVHsfKwF5pUEGAc77jun80WBD1jeKfbhwZYaI8OrU71YWpMHgELdVfY', '2021-07-23 16:38:11', '2021-08-06 12:57:36'),
 (13, 'Ali', 'ali123@hotmail.com', NULL, '$2y$10$GqL84QzPOxpIYngBaGRt6.rIGajHXWPlQnRmYqNk556YhCNvz1eOG', 'user', NULL, '2021-07-23 18:38:55', '2021-07-23 18:38:55'),
-(16, 'khadija shafei', 'khadoja1112@hotmail.com', NULL, '$2y$10$qfN1zOxFa5TAb5FAr2Il8ui7fJcRKiHMxExm7rj/dwIuDy4ybPwYS', 'user', NULL, '2021-08-06 12:45:30', '2021-08-06 12:45:30'),
-(18, 'gg', 'kh@hotmail.com', '2021-08-06 12:55:58', '$2y$10$.kVDLcBZ3rqiDSpV5IbYf.KVkkp4d.0AhNqr3w8pD3iscZz/SAZ5.', 'user', NULL, '2021-08-06 12:51:50', '2021-08-06 12:55:58');
+(18, 'gg', 'kh@hotmail.com', '2021-08-06 12:55:58', '$2y$10$.kVDLcBZ3rqiDSpV5IbYf.KVkkp4d.0AhNqr3w8pD3iscZz/SAZ5.', 'user', NULL, '2021-08-06 12:51:50', '2021-08-06 12:55:58'),
+(19, 'Mahmoud', 'Mahmoud@gmail.com', NULL, '$2y$10$OovL.9uBxtpYLk9PHNJ6UOesYypWGdUFCW9Sdo1zrdY2qTaiNhM4u', 'admin', NULL, '2022-06-24 12:21:48', '2022-06-24 12:21:48'),
+(20, 'hamouda', 'hamouda@gmail.com', NULL, '$2y$10$ZlXR1XSGiayPfuGsCKaFSugEXaY4.Dy2VlL7oDTJtoJQrZKMQ.Gca', 'user', NULL, '2022-06-24 12:24:02', '2022-06-24 12:24:02');
 
 --
 -- Indexes for dumped tables
@@ -479,7 +476,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
